@@ -150,7 +150,8 @@ p {
     margin-top: 20px;
 }
 
-/* Animation fade-in pour l'apparition du quiz */
+/**** Animation fade-in pour l'apparition du quiz ****/
+
 @keyframes fade-in {
     from {
         opacity: 0;

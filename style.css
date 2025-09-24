@@ -1,11 +1,20 @@
-/**** Reset ****/ 
+/**** Importation des polices DM Sans et Alan Sans ****/
+
+@import url('https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+
+/**** Reset ****/
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+button {
     border: none;
     outline: none;
+    font-family: "DM Sans", sans-serif;
 }
 
 /**** Style général de la page ****/
@@ -18,14 +27,16 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(rgba(255, 254, 254, 0.5), rgba(255, 250, 250, 0.5)),
-    url("img/football_1.jpg") center no-repeat fixed;
-    object-fit: fill;
+    background: linear-gradient(rgba(255, 254, 254, 0.7), rgba(255, 250, 250, 0.7)),
+        url("img/football_1.jpg") center no-repeat fixed;
+    object-fit: cover;
     position: relative;
+    font-family: "DM Sans", sans-serif;
 }
 
 
-header {
+header,
+footer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,15 +45,18 @@ header {
 h1 {
     font-size: 28px;
     font-weight: bold;
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 20px;
     text-transform: uppercase;
     text-decoration: underline;
     text-underline-offset: 10px;
+    padding-inline: 12px;
+    font-family: "Alan Sans", sans-serif;
 }
 
 main {
-    height: 75%; 
+    height: 75%;
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -61,7 +75,7 @@ p {
     background-color: #5d9b63;
     color: #ffffff;
     font-weight: 700;
-    width: 100%; 
+    width: 100%;
     padding: 12px;
     border-radius: 0;
     position: absolute;
@@ -71,7 +85,7 @@ p {
 }
 
 .btn {
-    width: 80%; 
+    width: 80%;
     font-size: 20px;
     font-weight: 700;
     padding: 12px 20px;
@@ -96,7 +110,7 @@ p {
 }
 
 .quiz__container {
-    width: 80%; 
+    width: 80%;
     max-width: 850px;
     padding: 30px;
     text-align: center;
@@ -107,6 +121,7 @@ p {
     font-size: 22px;
     font-weight: bold;
     line-height: 30px;
+    font-family: "Alan Sans", sans-serif;
 }
 
 .choices {
@@ -126,7 +141,7 @@ p {
 }
 
 .choice.selected {
-    background-color: #007bff;
+    background-color: #006400;
     color: #ffffff;
 }
 
@@ -137,20 +152,26 @@ p {
 
 /* Animation fade-in pour l'apparition du quiz */
 @keyframes fade-in {
-    from { 
+    from {
         opacity: 0;
         transform: translateY(50%);
     }
-    to { 
+
+    to {
         opacity: 1;
         transform: translateY(0%);
     }
 }
 
-footer span {
+footer {
+    margin-top: 20px;
+}
+
+footer p {
     font-weight: 700;
     font-size: 18px;
-    padding: 20px;
+    padding-inline: 12px;
+    font-family: "Alan Sans", sans-serif;
 }
 
 /**** Responsive design ****/
